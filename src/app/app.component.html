@@ -1,0 +1,14 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <a class="navbar-brand" [routerLink]="['home']">Audible</a>
+    <ul *ngIf="user.customerId" class="navbar-nav ms-auto">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['home']">Home</a>
+      </li>
+    </ul>
+
+    <!-- Add nav-links -->
+
+</nav>
+
+<!-- Add tag here -->
+<router-outlet></router-outlet>

@@ -1,0 +1,13 @@
+<div class="library">
+  <div class="card mb-3 card-margin" *ngFor="let audiobook of audioBooks">
+    <!-- Write code to view purchased books along with its audio -->
+  </div>
+</div>
+
+  <div *ngIf="audioBooks.length == 0" class="card text-center" style="margin-top: 10%;">
+    <div class="card-body">
+      <h5 class="card-title">Your Library is Empty</h5>
+      <p class="card-text">Buy Audiobooks to add them</p>
+      <a [routerLink]="['/home']" class="btn btn-primary">Explore Audiobooks</a>
+    </div>
+  </div>

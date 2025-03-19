@@ -1,0 +1,18 @@
+<div class="row search-bar">
+  <div class="col col-md-6">
+    <!-- Write code to search books -->
+    <!-- Write code to sort books -->
+  </div>
+</div>
+
+<div class="card mb-3 card-margin" *ngFor="let audiobook of audiobooks">
+  <div class="row g-0">
+    <!-- Write code to view all books available -->
+  </div>
+</div>
+
+<div *ngIf="audiobooks.length == 0" class="card text-center" style="margin-top: 10%;">
+  <div class="card-body">
+    <h5 class="card-title">No books found</h5>
+  </div>
+</div>

@@ -1,0 +1,51 @@
+<div class="container" *ngIf="!oldCard">
+    <div class="offset-3 col-md-6"><br><br><br>
+        <h3 class="text-center fw-bold">Enter Card Details to add Card</h3><br>
+        <!-- Create Form to add card -->
+        <!-- Also give option to use existing cards -->
+    </div>
+</div>
+
+
+<!--Available cards cards -->
+<div class="conContainer" *ngIf="oldCard" style="margin-top: 5%;">
+    <div class="box-container">
+        <div class="" *ngFor="let card of cards">
+            <!-- Display all available cards -->
+        </div>
+    </div>
+    <div class="text-center">
+        <button (click)="back()" class="btn btn-primary">Back</button>
+    </div>
+</div>
+
+
+<!-- pop up -->
+<div class="modal" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Payment Details</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" (click)="closeModel()"></button>
+            </div>
+
+            <div class="modal-body">
+                <!-- Display list of books and price before and after discount -->
+            </div>
+            
+            <div>
+                <div *ngIf="sucessMessage" class="text-success">
+                    <h5>{{sucessMessage}}</h5>
+                </div>
+                <div *ngIf="errorMessage" class="text-danger"><strong>{{errorMessage}}</strong></div>
+            </div>
+
+            <div class="modal-footer">
+
+                <button type="button" class="btn btn-success" data-bs-dismiss="modal">Pay</button>
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+            </div>
+
+        </div>
+    </div>
+</div>

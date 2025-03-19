@@ -1,0 +1,17 @@
+<div *ngIf="cartAudioBooks.length" class="cart">
+  <div class="card mb-3 card-margin" *ngFor="let cartBook of cartAudioBooks">
+    <!-- Write Code to view all books present in cart -->
+  </div>
+</div>
+
+
+  <div *ngIf="cartAudioBooks.length == 0" class="card text-center" style="margin-top: 10%;">
+    <div class="card-body">
+      <h5 class="card-title">Your Cart is Empty</h5>
+      <p class="card-text">Add audiobooks to the cart to buy.</p>
+      <a [routerLink]="['/home']" class="btn btn-primary">Explore Audiobooks</a>
+    </div>
+  </div>
+
+
+
